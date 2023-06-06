@@ -1,0 +1,114 @@
+.bgcolor {
+    background-image: linear-gradient(135deg, #FAB2FF 10%, #1904E5 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Open Sans", sans-serif;
+    color: #333333;
+  }
+  *{
+    text-decoration: none;
+}
+.navbar{
+    background: crimson; font-family: calibri; padding-right: 15px;padding-left: 15px;
+}
+.navdiv{
+    display: flex; align-items: center; justify-content: space-between;
+}
+.logo a{
+    font-size: 35px; font-weight: 600; color: white;
+}
+li{
+    list-style: none; display: inline-block;
+}
+li a{
+    color: white; font-size: 18px; font-weight: bold; margin-right: 25px;
+}
+button{
+    background-color: black; margin-left: 10px; border-radius: 10px; padding: 10px; width: 90px;
+}
+button a{
+    color: white; font-weight: bold; font-size: 15px;
+}
+body{
+    padding-top: 75px;
+  }
+  
+  .search-container{
+    width: 490px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  input#search-bar{
+    margin: 0 auto;
+    width: 100%;
+    height: 45px;
+    padding: 0 20px;
+    font-size: 1rem;
+    border: 1px solid #D0CFCE;
+    border-radius: 10%;
+    outline: none;
+    &:focus{
+      border: 1px solid #008ABF;
+      border-radius: 10%;
+      transition: 0.35s ease;
+      color: #008ABF;
+      &::-webkit-input-placeholder{
+        transition: opacity 0.45s ease; 
+          opacity: 0;
+       }
+      &::-moz-placeholder {
+        transition: opacity 0.45s ease; 
+          opacity: 0;
+       }
+      &:-ms-placeholder {
+       transition: opacity 0.45s ease; 
+         opacity: 0;
+       }    
+     }
+   }
+  
+  .search-icon{
+    position: relative;
+    float: right;
+    width: 75px;
+    height: 75px;
+    top: -62px;
+    right: -45px;
+  }
+  .container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-left: 15px;
+    width: 95%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .gray-container {
+    display: flex; /* Added flex display */
+    align-items: center; /* Align items vertically in the container */
+    background-color: rgb(173, 232, 255);
+    border-radius: 10px;
+    padding: 20px;
+    margin-left: 15px;
+    width: 95%;
+    height: 70%;
+    box-shadow:0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  .gray-container + .gray-container {
+    margin-top: 20px; /* Add margin between gray containers */
+    }
+  .gray-container h3{
+    margin-top: 10px;
+  }
+  .gray-container img {
+    flex: 0 0 450px; /* Set width of the image */
+    height: 250px;
+    margin-right: 20px; /* Add margin to create space between image and text */
+  }
+  
+  
+  
+  

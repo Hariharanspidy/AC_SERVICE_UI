@@ -1,0 +1,40 @@
+<nav class="navbar">
+  <div class="navdiv">
+    <div class="logo"><a href="#">Cooling master</a> </div>
+    <ul>
+      <li><a href="user/dashboard">DASH BOARD</a></li>
+      <li><a href="user/appointment">APPOINTMENT</a></li>
+
+      <button><a href="/login">logout</a></button>
+    </ul>
+  </div>
+</nav>
+<div class="bgcolor">
+  <br>
+  <form class="search-container">
+    <input type="text" id="search-bar" placeholder="What can I help you with today?">
+    <a href="#"><img class="search-icon"
+        src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
+  </form>
+  <br>
+  <div class="container">
+    <div *ngIf="servicesarr.length==0" class="alert alert-info">
+      NO service found
+    </div>
+    <div class="temp" *ngIf="servicesarr.length>0">
+      <a *ngFor="let ser of servicesarr" routerLink="/user/dashboard" class="gray-container"
+        (click)="getServiceCenterName(ser.serviceCenterName)">
+        <img src="{{ser.serviceCenterImageUrl}}" width="450" height="250">
+
+        <div>
+          <h3>Center Name: {{ser.serviceCenterName}}</h3>
+          <h3>Contact Number: {{ser.serviceCenterPhone}}</h3>
+          <h3>Contact Number: {{ser.serviceCenteramailId}}</h3>
+        </div>
+      </a>
+    </div>
+  </div>
+  <br>
+
+
+</div>

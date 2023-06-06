@@ -1,0 +1,66 @@
+<nav class="navbar">
+  <div class="navdiv">
+    <div class="logo"><a href="#">Cooling master</a> </div>
+    <ul>
+      <li><a href="user/homepage">HOME</a></li>
+      <li><a href="user/appointment">APPOINTMENT</a></li>
+
+      <button><a href="/login">logout</a></button>
+    </ul>
+  </div>
+</nav>
+<div class="bgcolor">
+  <br>
+  <div class="curved-rectangle-container" id="dashBoardBody">
+
+    <div class="left-half-container">
+
+      <div class="circle-container">
+        <img
+          src="https://img1.wsimg.com/isteam/ip/e7423f51-0dab-4786-8923-e861fcbcdf58/download%20(3).jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:600,cg:true"
+          alt="Image" width="435" height="435" class="circle-image">
+      </div>
+      <div class="bottom-curve">
+
+        <div class="txt">
+          <h1>{{serviceName}}</h1>
+          <hr>
+          Contact Number: <br>
+          Contact Number:
+        </div>
+      </div>
+    </div>
+
+    <div class="right-half-container">
+      <div class="box-form">
+        <div class="right">
+          <div class="inputs">
+            <h1>Enter the details</h1>
+            <form [formGroup]="productdetails">
+              <input type="text" placeholder="Enter the name of the product" id="enterProductName" formControlName="productName">
+              <small *ngIf="productdetails.controls['productName'].dirty && productdetails.hasError('required','productName')">Product name is required</small>
+
+              <input type="text" placeholder="Enter the model no of the product" id="enterModelN0"formControlName="ProductModelNo">
+              <small *ngIf="productdetails.controls['ProductModelNo'].dirty && productdetails.hasError('required','ProductModelNo')">availableSlots  is required</small>
+
+              <input type="date" placeholder="Enter the date of purchase" id="enterDateOfPurchase"formControlName="ProductDateOfPurchase">
+              <small *ngIf="productdetails.controls['ProductDateOfPurchase'].dirty && productdetails.hasError('required','ProductDateOfPurchase')">ProductDateOfPurchase is required</small>
+
+              <input type="tel" placeholder="Enter the contact number" id="enterContactNumber"formControlName="contactNumber">
+              <small *ngIf="productdetails.controls['contactNumber'].dirty && productdetails.hasError('required','contactNumber')">contactNumber is required</small>
+
+              <textarea placeholder="Enter problem of the product" id="enterProblem"formControlName="problemDescription"></textarea>
+              <small *ngIf="productdetails.controls['problemDescription'].dirty && productdetails.hasError('required','problemDescription')">problemDescription is required</small>
+
+              <input type="time" placeholder="Enter the contact number" id="enterContactNumber"formControlName="availableSlots">
+              <small *ngIf="productdetails.controls['availableSlots'].dirty && productdetails.hasError('required','availableSlots')">availableSlots is required</small>
+
+              <button (click)="onbook()"type="submit" id="bookButton">BOOK</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+</div>

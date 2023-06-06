@@ -1,0 +1,27 @@
+<div class="bgcolor">
+  <div class="box-form">
+    <div class="left">
+      <div class="overlay">
+        <h1>Hello World.</h1>
+        <p>24-hour service and maintenance.
+          24-hour emergency service.
+          A flair for air.</p>
+      </div>
+    </div>
+    <div class="right">
+      <h5>Login</h5>
+      <p>Don't have an account? <a routerLink="/signup" id="signipLink">Create Your Account</a> it takes less than a minute</p>
+
+      <div class="inputs">
+        <form [formGroup]="LoginForm">
+          <input formControlName="email" type="email" placeholder="Email" id="email" />
+          <small *ngIf="LoginForm.controls['email'].dirty && LoginForm.hasError('email','email')">*email is required</small>
+          <input formControlName="password" type="password" placeholder="password" id="password" />
+          <small *ngIf="LoginForm.controls['password'].dirty && LoginForm.hasError('required','password')">*password isrequired</small>
+        </form>
+      </div>
+      <br><br><br>
+      <button (click)="onlogin()" type="submit" id="loginButton">login</button>
+    </div>
+  </div>
+</div>
